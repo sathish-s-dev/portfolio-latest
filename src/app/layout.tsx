@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Link from "next/link";
+import Footer from "@/components/footer";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -24,12 +26,201 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth transition-all duration-1000">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden`}
       >
+        <NavBar />
+        {/* <Header /> */}
         {children}
+        <Footer />
       </body>
     </html>
+  );
+}
+
+function NavBar() {
+  return (
+    <header className="border-b border-slate-50/20 sticky top-0 z-[100] backdrop-blur-lg">
+      <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+        <div className="flex h-16 items-center justify-between">
+          <div className="md:flex md:items-center md:gap-12">
+            <Link
+              className="gap-1 text-emerald-600 dark:text-emerald-600 flex justify-center items-center"
+              href="#"
+            >
+              <span className="sr-only">Home</span>
+              <p className="font-bold text-xl">Sathish</p>
+              👋
+            </Link>
+          </div>
+
+          <div className="hidden md:block">
+            <nav aria-label="Global">
+              <ul className="flex items-center gap-6 text-sm">
+                <li>
+                  <a
+                    className="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
+                    href="#"
+                  >
+                    About
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    className="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
+                    href="#"
+                  >
+                    Careers
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
+                    href="#"
+                  >
+                    Projects
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    className="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
+                    href="#"
+                  >
+                    Contact
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <div className="flex items-center gap-4">
+            <div className="sm:flex sm:gap-4">
+              <a
+                className="rounded-md bg-emerald-600 px-5 py-2.5 text-sm font-medium text-white shadow dark:hover:bg-emerald-700"
+                href="#footer"
+              >
+                Hire Me
+              </a>
+            </div>
+
+            <div className="block md:hidden">
+              <button className="rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75 dark:bg-gray-800 dark:text-white dark:hover:text-white/75">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="size-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  );
+}
+
+function Header() {
+  return (
+    <header className="flex flex-wrap sm:justify-start sm:flex-nowrap w-full bg-gray-800 text-sm py-3 dark:bg-white">
+      <nav className="max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between">
+        <div className="flex items-center justify-between">
+          <a
+            className="flex-none text-xl font-semibold text-white focus:outline-none focus:opacity-80 dark:text-neutral-800"
+            href="#"
+          >
+            Brand
+          </a>
+          <div className="sm:hidden">
+            <button
+              type="button"
+              className="hs-collapse-toggle relative size-7 flex justify-center items-center gap-2 rounded-lg border border-gray-700 font-medium bg-gray-800 text-gray-400 shadow-sm align-middle hover:bg-gray-700/20 focus:outline-none focus:bg-gray-700/20 text-sm dark:bg-white dark:hover:bg-gray-100 dark:border-gray-200 dark:text-gray-600 dark:focus:bg-gray-100"
+              id="hs-navbar-dark-collapse"
+              aria-expanded="false"
+              aria-controls="hs-navbar-dark"
+              aria-label="Toggle navigation"
+              data-hs-collapse="#hs-navbar-dark"
+            >
+              <svg
+                className="hs-collapse-open:hidden shrink-0 size-4"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <line x1="3" x2="21" y1="6" y2="6" />
+                <line x1="3" x2="21" y1="12" y2="12" />
+                <line x1="3" x2="21" y1="18" y2="18" />
+              </svg>
+              <svg
+                className="hs-collapse-open:block hidden shrink-0 size-4"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M18 6 6 18" />
+                <path d="m6 6 12 12" />
+              </svg>
+              <span className="sr-only">Toggle</span>
+            </button>
+          </div>
+        </div>
+        <div
+          id="hs-navbar-dark"
+          className="hidden hs-collapse overflow-hidden transition-all duration-300 basis-full grow sm:block"
+          aria-labelledby="hs-navbar-dark-collapse"
+        >
+          <div className="flex flex-col gap-5 mt-5 sm:flex-row sm:items-center sm:justify-end sm:mt-0 sm:ps-5">
+            <a
+              className="font-medium text-white focus:outline-none dark:text-black"
+              href="#"
+              aria-current="page"
+            >
+              Landing
+            </a>
+            <a
+              className="font-medium text-gray-400 hover:text-gray-500 focus:outline-none focus:text-gray-500 dark:text-neutral-500 dark:hover:text-neutral-400 dark:focus:text-neutral-400"
+              href="#"
+            >
+              Account
+            </a>
+            <a
+              className="font-medium text-gray-400 hover:text-gray-500 focus:outline-none focus:text-gray-500 dark:text-neutral-500 dark:hover:text-neutral-400 dark:focus:text-neutral-400"
+              href="#"
+            >
+              Work
+            </a>
+            <a
+              className="font-medium text-gray-400 hover:text-gray-500 focus:outline-none focus:text-gray-500 dark:text-neutral-500 dark:hover:text-neutral-400 dark:focus:text-neutral-400"
+              href="#"
+            >
+              Blog
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
   );
 }
