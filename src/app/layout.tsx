@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Link from "next/link";
 import Footer from "@/components/footer";
+import Script from "next/script";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -27,10 +28,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth transition-all duration-1000">
-      <head>
-      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1092030707068488"
-     crossOrigin="anonymous"></script>s
-        </head>
+      <Script
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1092030707068488"
+        strategy="lazyOnload"
+        crossOrigin="anonymous"
+        async={true}
+      />
+
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden`}
       >
