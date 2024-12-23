@@ -1,358 +1,371 @@
 "use client";
 
-import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
+// import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
 import { FlipWords } from "@/components/ui/flip-words";
+import { TracingBeam } from "@/components/ui/tracing-beam";
+import { IconDownload } from "@tabler/icons-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div>
-      <div className="min-h-[500px] flex justify-center items-center gap-16 font-[family-name:var(--font-geist-sans)]">
-        {/* <AnimatedModalDemo /> */}
-        {/* <BackgroundBeams className="w-full h-full z-[-1]" /> */}
-        <BackgroundBeamsWithCollision className="w-full min-h-[90vh] absolute inset-0 z-[-1]">
-          <div></div>
-        </BackgroundBeamsWithCollision>
+    <TracingBeam className="w-full">
+      <div>
+        <div className="min-h-[500px] flex justify-center items-center gap-16 font-[family-name:var(--font-geist-sans)]">
+          {/* <AnimatedModalDemo /> */}
+          {/* <BackgroundBeams className="w-full h-full z-[-1]" /> */}
+          {/* <BackgroundBeamsWithCollision className="w-full min-h-[60vh] absolute inset-0 z-[-1]">
+            <div></div>
+          </BackgroundBeamsWithCollision> */}
 
-        <section className="w-full relative z-[10]">
-          <div className="container mx-auto flex flex-col items-center px-8  text-center md:py-32 md:px-10 lg:px-32 xl:max-w-5xl">
-            <h1 className="text-4xl font-bold leading-none sm:text-7xl mb-2 md:mb-6 max-w-3xl">
-              Hi there, I&apos;m
-              <span className="dark:text-emerald-600"> Sathish</span>
-            </h1>
+          <section className="w-full relative z-[10]">
+            <div className="container mx-auto flex flex-col items-center px-8  text-center md:py-32 md:px-10 lg:px-32 xl:max-w-5xl">
+              <h1 className="text-4xl font-bold leading-none sm:text-7xl mb-2 md:mb-6 max-w-3xl">
+                Hi there, I&apos;m
+                <span className="dark:text-emerald-600"> Sathish</span>
+              </h1>
 
-            <FlipWords
-              words={[
-                "React Developer",
-                "UI/UX Designer",
-                "Web Developer",
-                "Software Engineer",
-                "React Native Developer",
-              ]}
-              className="md:text-4xl text-xl p-0"
-            />
+              <FlipWords
+                words={[
+                  "React Developer",
+                  "UI/UX Designer",
+                  "Web Developer",
+                  "Software Engineer",
+                  "React Native Developer",
+                ]}
+                className="md:text-4xl text-xl p-0"
+              />
 
-            <p className="mt-4 md:mt-8 mb-4 md:mb-12 text-lg">
-              Hi, I&apos;m Sathish, a passionate and creative frontend developer
-              with expertise in React.js, UI/UX design, and React Native app
-              development.
-            </p>
+              <p className="mt-4 md:mt-8 mb-4 md:mb-12 text-lg">
+                Hi, I&apos;m Sathish, a passionate and creative frontend
+                developer with expertise in React.js, UI/UX design, and React
+                Native app development.
+              </p>
 
-            <div className="flex justify-center w-full max-w-96 flex-col sm:flex-row gap-2">
-              <button className="px-6 md:px-12 py-2 md:py-3 w-full text-lg font-semibold rounded dark:bg-emerald-600 dark:text-gray-50">
-                Hire Me
-              </button>
-              <button className="px-6 md:px-12 py-2 md:py-3 w-full text-lg border rounded dark:text-emerald-600 dark:border-emerald-600">
-                Resume
-              </button>
+              <div className="flex justify-center w-full max-w-96 flex-col sm:flex-row gap-2">
+                <button className="px-12 py-2 rounded-full relative bg-black text-white text-sm hover:shadow-2xl hover:shadow-white/[0.1] transition duration-200 border border-slate-600">
+                  <div className="absolute inset-x-0 h-px w-1/2 mx-auto -top-px shadow-2xl  bg-gradient-to-r from-transparent via-teal-500 to-transparent" />
+                  <span className="relative z-20 flex items-center gap-1">
+                    <IconDownload size={"18px"} />
+                    Resume
+                  </span>
+                </button>
+
+                {/* <HoverBorderGradientButton>
+                  <IconDownload size={"18px"} />
+                  Resume
+                </HoverBorderGradientButton> */}
+              </div>
+            </div>
+          </section>
+        </div>
+
+        {/* about section */}
+
+        <section className="overflow-hidden sm:grid sm:grid-cols-2 max-w-screen-xl mx-auto py-12">
+          <div className="p-8 lg:py-24 lg:p-16">
+            <div className="mx-auto max-w-2xl ltr:sm:text-left rtl:sm:text-right flex flex-col gap-4">
+              <h2 className="text-2xl font-bold text-gray-900 md:text-3xl dark:text-white">
+                A little bit about me
+              </h2>
+
+              <p className="text-sm text-gray-500 md:mt-4 md:block dark:text-gray-300 text-justify">
+                Hi, I&apos;m Sathish, a passionate and creative frontend
+                developer with expertise in React.js, UI/UX design, and React
+                Native app development. With a keen eye for detail and a
+                dedication to delivering high-quality, user-centric solutions, I
+                ensure every project I work on is both aesthetically pleasing
+                and highly functional.
+              </p>
+
+              <div className="">
+                <Link className="" href="/">
+                  {/* <button className="inline-flex py-2 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#059669,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-50 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+                    Hire me
+                  </button> */}
+                  <button className="px-8 py-2 rounded-full relative bg-black text-white text-sm hover:shadow-2xl hover:shadow-white/[0.1] transition duration-200 border border-slate-600">
+                    <div className="absolute inset-x-0 h-px w-1/2 mx-auto -top-px shadow-2xl  bg-gradient-to-r from-transparent via-teal-500 to-transparent" />
+                    <span className="relative z-20">Contact Me</span>
+                  </button>
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          <Image
+            alt=""
+            src="https://images.unsplash.com/photo-1464582883107-8adf2dca8a9f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+            className="h-56 w-full object-cover sm:h-full"
+            width={400}
+            height={400}
+          />
+        </section>
+
+        {/* special section */}
+        <section className="max-w-screen-xl mx-auto py-12">
+          <div className="max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
+            <div className="max-w-xl">
+              <h2 className="text-3xl font-bold sm:text-4xl">
+                What makes us special
+              </h2>
+
+              <p className="mt-4 text-gray-300">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Repellat dolores iure fugit totam iste obcaecati. Consequatur
+                ipsa quod ipsum sequi culpa delectus, cumque id tenetur
+                quibusdam, quos fuga minima.
+              </p>
+            </div>
+
+            <div className="mt-8 grid grid-cols-1 gap-8 md:mt-16 md:grid-cols-2 md:gap-12 lg:grid-cols-3">
+              <div className="flex items-start gap-4">
+                <span className="shrink-0 rounded-lg bg-emerald-800 p-4">
+                  <svg
+                    className="size-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
+                    <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path>
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
+                    ></path>
+                  </svg>
+                </span>
+
+                <div>
+                  <h2 className="text-lg font-bold">Lorem, ipsum dolor.</h2>
+
+                  <p className="mt-1 text-sm text-gray-300">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Error cumque tempore est ab possimus quisquam reiciendis
+                    tempora animi! Quaerat, saepe?
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <span className="shrink-0 rounded-lg bg-emerald-800 p-4">
+                  <svg
+                    className="size-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
+                    <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path>
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
+                    ></path>
+                  </svg>
+                </span>
+
+                <div>
+                  <h2 className="text-lg font-bold">Lorem, ipsum dolor.</h2>
+
+                  <p className="mt-1 text-sm text-gray-300">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Error cumque tempore est ab possimus quisquam reiciendis
+                    tempora animi! Quaerat, saepe?
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <span className="shrink-0 rounded-lg bg-emerald-800 p-4">
+                  <svg
+                    className="size-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
+                    <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path>
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
+                    ></path>
+                  </svg>
+                </span>
+
+                <div>
+                  <h2 className="text-lg font-bold">Lorem, ipsum dolor.</h2>
+
+                  <p className="mt-1 text-sm text-gray-300">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Error cumque tempore est ab possimus quisquam reiciendis
+                    tempora animi! Quaerat, saepe?
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <span className="shrink-0 rounded-lg bg-emerald-800 p-4">
+                  <svg
+                    className="size-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
+                    <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path>
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
+                    ></path>
+                  </svg>
+                </span>
+
+                <div>
+                  <h2 className="text-lg font-bold">Lorem, ipsum dolor.</h2>
+
+                  <p className="mt-1 text-sm text-gray-300">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Error cumque tempore est ab possimus quisquam reiciendis
+                    tempora animi! Quaerat, saepe?
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <span className="shrink-0 rounded-lg bg-emerald-800 p-4">
+                  <svg
+                    className="size-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
+                    <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path>
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
+                    ></path>
+                  </svg>
+                </span>
+
+                <div>
+                  <h2 className="text-lg font-bold">Lorem, ipsum dolor.</h2>
+
+                  <p className="mt-1 text-sm text-gray-300">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Error cumque tempore est ab possimus quisquam reiciendis
+                    tempora animi! Quaerat, saepe?
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <span className="shrink-0 rounded-lg bg-emerald-800 p-4">
+                  <svg
+                    className="size-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
+                    <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path>
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
+                    ></path>
+                  </svg>
+                </span>
+
+                <div>
+                  <h2 className="text-lg font-bold">Lorem, ipsum dolor.</h2>
+
+                  <p className="mt-1 text-sm text-gray-300">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Error cumque tempore est ab possimus quisquam reiciendis
+                    tempora animi! Quaerat, saepe?
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
-      </div>
 
-      {/* about section */}
-
-      <section className="overflow-hidden sm:grid sm:grid-cols-2 max-w-screen-xl mx-auto py-12">
-        <div className="p-8 lg:py-24 lg:p-16">
-          <div className="mx-auto max-w-2xl ltr:sm:text-left rtl:sm:text-right flex flex-col gap-4">
-            <h2 className="text-2xl font-bold text-gray-900 md:text-3xl dark:text-white">
-              A little bit about me
+        {/* stats section */}
+        <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+          <div className="mx-auto max-w-3xl text-center">
+            <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl dark:text-white">
+              Trusted by Clients
             </h2>
 
-            <p className="text-sm text-gray-500 md:mt-4 md:block dark:text-gray-300 text-justify">
-              Hi, I&apos;m Sathish, a passionate and creative frontend developer
-              with expertise in React.js, UI/UX design, and React Native app
-              development. With a keen eye for detail and a dedication to
-              delivering high-quality, user-centric solutions, I ensure every
-              project I work on is both aesthetically pleasing and highly
-              functional.
-            </p>
-
-            <div className="">
-              <a
-                href="#"
-                className="rounded bg-emerald-600 px-6 md:px-12 py-2 md:py-3 text-sm font-medium text-white transition hover:bg-emerald-700 focus:outline-none focus:ring focus:ring-yellow-400"
-              >
-                Get Started Today
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <Image
-          alt=""
-          src="https://images.unsplash.com/photo-1464582883107-8adf2dca8a9f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-          className="h-56 w-full object-cover sm:h-full"
-          width={400}
-          height={400}
-        />
-      </section>
-
-      {/* special section */}
-      <section className="max-w-screen-xl mx-auto py-12">
-        <div className="max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
-          <div className="max-w-xl">
-            <h2 className="text-3xl font-bold sm:text-4xl">
-              What makes us special
-            </h2>
-
-            <p className="mt-4 text-gray-300">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
-              dolores iure fugit totam iste obcaecati. Consequatur ipsa quod
-              ipsum sequi culpa delectus, cumque id tenetur quibusdam, quos fuga
-              minima.
+            <p className="mt-4 text-gray-500 sm:text-xl dark:text-gray-400">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
+              rem, quae dolores quos.
             </p>
           </div>
 
-          <div className="mt-8 grid grid-cols-1 gap-8 md:mt-16 md:grid-cols-2 md:gap-12 lg:grid-cols-3">
-            <div className="flex items-start gap-4">
-              <span className="shrink-0 rounded-lg bg-emerald-800 p-4">
-                <svg
-                  className="size-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
-                  <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path>
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
-                  ></path>
-                </svg>
-              </span>
+          <dl className="mt-6 grid grid-cols-1 gap-4 sm:mt-8 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="flex flex-col rounded-lg border border-gray-100 px-4 py-8 text-center dark:border-gray-800">
+              <dt className="order-last text-lg font-medium text-gray-500 dark:text-gray-400">
+                Total Exp years
+              </dt>
 
-              <div>
-                <h2 className="text-lg font-bold">Lorem, ipsum dolor.</h2>
-
-                <p className="mt-1 text-sm text-gray-300">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
-                  cumque tempore est ab possimus quisquam reiciendis tempora
-                  animi! Quaerat, saepe?
-                </p>
-              </div>
+              <dd className="text-4xl font-extrabold text-emerald-600 md:text-5xl">
+                3+
+              </dd>
             </div>
 
-            <div className="flex items-start gap-4">
-              <span className="shrink-0 rounded-lg bg-emerald-800 p-4">
-                <svg
-                  className="size-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
-                  <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path>
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
-                  ></path>
-                </svg>
-              </span>
+            <div className="flex flex-col rounded-lg border border-gray-100 px-4 py-8 text-center dark:border-gray-800">
+              <dt className="order-last text-lg font-medium text-gray-500 dark:text-gray-400">
+                Total Projects
+              </dt>
 
-              <div>
-                <h2 className="text-lg font-bold">Lorem, ipsum dolor.</h2>
-
-                <p className="mt-1 text-sm text-gray-300">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
-                  cumque tempore est ab possimus quisquam reiciendis tempora
-                  animi! Quaerat, saepe?
-                </p>
-              </div>
+              <dd className="text-4xl font-extrabold text-emerald-600 md:text-5xl">
+                6
+              </dd>
             </div>
 
-            <div className="flex items-start gap-4">
-              <span className="shrink-0 rounded-lg bg-emerald-800 p-4">
-                <svg
-                  className="size-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
-                  <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path>
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
-                  ></path>
-                </svg>
-              </span>
+            <div className="flex flex-col rounded-lg border border-gray-100 px-4 py-8 text-center dark:border-gray-800">
+              <dt className="order-last text-lg font-medium text-gray-500 dark:text-gray-400">
+                Total Addons
+              </dt>
 
-              <div>
-                <h2 className="text-lg font-bold">Lorem, ipsum dolor.</h2>
-
-                <p className="mt-1 text-sm text-gray-300">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
-                  cumque tempore est ab possimus quisquam reiciendis tempora
-                  animi! Quaerat, saepe?
-                </p>
-              </div>
+              <dd className="text-4xl font-extrabold text-emerald-600 md:text-5xl">
+                86
+              </dd>
             </div>
 
-            <div className="flex items-start gap-4">
-              <span className="shrink-0 rounded-lg bg-emerald-800 p-4">
-                <svg
-                  className="size-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
-                  <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path>
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
-                  ></path>
-                </svg>
-              </span>
+            <div className="flex flex-col rounded-lg border border-gray-100 px-4 py-8 text-center dark:border-gray-800">
+              <dt className="order-last text-lg font-medium text-gray-500 dark:text-gray-400">
+                Downloads
+              </dt>
 
-              <div>
-                <h2 className="text-lg font-bold">Lorem, ipsum dolor.</h2>
-
-                <p className="mt-1 text-sm text-gray-300">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
-                  cumque tempore est ab possimus quisquam reiciendis tempora
-                  animi! Quaerat, saepe?
-                </p>
-              </div>
+              <dd className="text-4xl font-extrabold text-emerald-600 md:text-5xl">
+                86k
+              </dd>
             </div>
-
-            <div className="flex items-start gap-4">
-              <span className="shrink-0 rounded-lg bg-emerald-800 p-4">
-                <svg
-                  className="size-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
-                  <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path>
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
-                  ></path>
-                </svg>
-              </span>
-
-              <div>
-                <h2 className="text-lg font-bold">Lorem, ipsum dolor.</h2>
-
-                <p className="mt-1 text-sm text-gray-300">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
-                  cumque tempore est ab possimus quisquam reiciendis tempora
-                  animi! Quaerat, saepe?
-                </p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4">
-              <span className="shrink-0 rounded-lg bg-emerald-800 p-4">
-                <svg
-                  className="size-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
-                  <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path>
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
-                  ></path>
-                </svg>
-              </span>
-
-              <div>
-                <h2 className="text-lg font-bold">Lorem, ipsum dolor.</h2>
-
-                <p className="mt-1 text-sm text-gray-300">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
-                  cumque tempore est ab possimus quisquam reiciendis tempora
-                  animi! Quaerat, saepe?
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* stats section */}
-      <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
-        <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl dark:text-white">
-            Trusted by eCommerce Businesses
-          </h2>
-
-          <p className="mt-4 text-gray-500 sm:text-xl dark:text-gray-400">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-            dolores laborum labore provident impedit esse recusandae facere
-            libero harum sequi.
-          </p>
+          </dl>
         </div>
 
-        <dl className="mt-6 grid grid-cols-1 gap-4 sm:mt-8 sm:grid-cols-2 lg:grid-cols-4">
-          <div className="flex flex-col rounded-lg border border-gray-100 px-4 py-8 text-center dark:border-gray-800">
-            <dt className="order-last text-lg font-medium text-gray-500 dark:text-gray-400">
-              Total Sales
-            </dt>
-
-            <dd className="text-4xl font-extrabold text-emerald-600 md:text-5xl">
-              $4.8m
-            </dd>
-          </div>
-
-          <div className="flex flex-col rounded-lg border border-gray-100 px-4 py-8 text-center dark:border-gray-800">
-            <dt className="order-last text-lg font-medium text-gray-500 dark:text-gray-400">
-              Official Addons
-            </dt>
-
-            <dd className="text-4xl font-extrabold text-emerald-600 md:text-5xl">
-              24
-            </dd>
-          </div>
-
-          <div className="flex flex-col rounded-lg border border-gray-100 px-4 py-8 text-center dark:border-gray-800">
-            <dt className="order-last text-lg font-medium text-gray-500 dark:text-gray-400">
-              Total Addons
-            </dt>
-
-            <dd className="text-4xl font-extrabold text-emerald-600 md:text-5xl">
-              86
-            </dd>
-          </div>
-
-          <div className="flex flex-col rounded-lg border border-gray-100 px-4 py-8 text-center dark:border-gray-800">
-            <dt className="order-last text-lg font-medium text-gray-500 dark:text-gray-400">
-              Downloads
-            </dt>
-
-            <dd className="text-4xl font-extrabold text-emerald-600 md:text-5xl">
-              86k
-            </dd>
-          </div>
-        </dl>
+        {/* <div className="min-h-[100vh]"></div> */}
       </div>
-
-      {/* <div className="min-h-[100vh]"></div> */}
-    </div>
+    </TracingBeam>
   );
 }
 
