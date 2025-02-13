@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@radix-ui/react-tooltip": "^1.1.8",
     "@react-three/drei": "^9.117.0",
     "@tabler/icons-react": "^3.22.0",
     "@types/three": "^0.170.0",

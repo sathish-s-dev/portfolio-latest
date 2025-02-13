@@ -1,5 +1,6 @@
 "use client";
 
+import Skills from "@/components/skills-section";
 // import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
 import { FlipWords } from "@/components/ui/flip-words";
 import { TracingBeam } from "@/components/ui/tracing-beam";
@@ -68,16 +69,34 @@ export default function Home() {
               <h2 className="text-2xl font-bold text-gray-900 md:text-3xl dark:text-white">
                 A little bit about me
               </h2>
-
-              <p className="text-sm text-gray-500 md:mt-4 md:block dark:text-gray-300 text-justify">
-                Hi, I&apos;m Sathish, a passionate and creative frontend
-                developer with expertise in React.js, UI/UX design, and React
-                Native app development. With a keen eye for detail and a
-                dedication to delivering high-quality, user-centric solutions, I
-                ensure every project I work on is both aesthetically pleasing
-                and highly functional.
+              <p className="text-sm text-gray-500 md:mt-1 md:block dark:text-gray-300 text-justify">
+                I am a results-driven Frontend Developer mainly focused on React
+                with a passion for building high-performance, scalable, and
+                user-centric applications. With a strong foundation in both
+                frontend and backend development, I specialize in crafting
+                seamless digital experiences that balance aesthetics with
+                efficiency.
               </p>
-
+              {/* <p className="text-sm text-gray-500 md:mt-1 md:block dark:text-gray-300 text-justify">
+                Currently, I contribute as a Full Stack Developer at Alif
+                Technologies, engineering robust solutions that enhance user
+                engagement and optimize system performance. My expertise spans
+                across designing intuitive interfaces, developing efficient
+                APIs, and architecting scalable infrastructures.
+              </p>
+              <p className="text-sm text-gray-500 md:mt-1 md:block dark:text-gray-300 text-justify">
+                Over the years, I have led and contributed to numerous projects,
+                ensuring high standards in performance, security, and
+                maintainability. My approach focuses on clean code, strategic
+                problem-solving, and innovation, allowing businesses to scale
+                efficiently and deliver exceptional digital products.
+              </p> */}
+              <p className="text-sm text-gray-500 md:mt-1 md:block dark:text-gray-300 text-justify">
+                Beyond development, I am deeply involved in mentoring,
+                open-source contributions, and staying ahead of emerging
+                technologies. My goal is to push boundaries, refine digital
+                experiences, and create meaningful impact through technology.
+              </p>
               <div className="">
                 <Link className="" href="/">
                   {/* <button className="inline-flex py-2 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#059669,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-50 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
@@ -101,6 +120,8 @@ export default function Home() {
           />
         </section>
 
+        <Skills />
+
         {/* special section */}
         <section className="max-w-screen-xl mx-auto py-12">
           <div className="max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
@@ -109,7 +130,7 @@ export default function Home() {
                 What makes us special
               </h2>
 
-              <p className="mt-4 text-gray-300">
+              <p className="mt-4 dark:text-gray-300 text-gray-600">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Repellat dolores iure fugit totam iste obcaecati. Consequatur
                 ipsa quod ipsum sequi culpa delectus, cumque id tenetur
@@ -119,7 +140,7 @@ export default function Home() {
 
             <div className="mt-8 grid grid-cols-1 gap-8 md:mt-16 md:grid-cols-2 md:gap-12 lg:grid-cols-3">
               <div className="flex items-start gap-4">
-                <span className="shrink-0 rounded-lg bg-emerald-800 p-4">
+                <span className="shrink-0 rounded-lg bg-emerald-800 text-white p-4">
                   <svg
                     className="size-5"
                     fill="none"
@@ -141,7 +162,7 @@ export default function Home() {
                 <div>
                   <h2 className="text-lg font-bold">Lorem, ipsum dolor.</h2>
 
-                  <p className="mt-1 text-sm text-gray-300">
+                  <p className="mt-1 text-sm text-gray-600 dark:text-gray-300">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Error cumque tempore est ab possimus quisquam reiciendis
                     tempora animi! Quaerat, saepe?
@@ -150,7 +171,7 @@ export default function Home() {
               </div>
 
               <div className="flex items-start gap-4">
-                <span className="shrink-0 rounded-lg bg-emerald-800 p-4">
+                <span className="shrink-0 rounded-lg bg-emerald-800 text-white p-4 text-white">
                   <svg
                     className="size-5"
                     fill="none"
@@ -172,7 +193,7 @@ export default function Home() {
                 <div>
                   <h2 className="text-lg font-bold">Lorem, ipsum dolor.</h2>
 
-                  <p className="mt-1 text-sm text-gray-300">
+                  <p className="mt-1 text-sm text-gray-600 dark:text-gray-300">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Error cumque tempore est ab possimus quisquam reiciendis
                     tempora animi! Quaerat, saepe?
@@ -181,7 +202,7 @@ export default function Home() {
               </div>
 
               <div className="flex items-start gap-4">
-                <span className="shrink-0 rounded-lg bg-emerald-800 p-4">
+                <span className="shrink-0 rounded-lg bg-emerald-800 text-white p-4">
                   <svg
                     className="size-5"
                     fill="none"
@@ -203,7 +224,7 @@ export default function Home() {
                 <div>
                   <h2 className="text-lg font-bold">Lorem, ipsum dolor.</h2>
 
-                  <p className="mt-1 text-sm text-gray-300">
+                  <p className="mt-1 text-sm text-gray-600 dark:text-gray-300">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Error cumque tempore est ab possimus quisquam reiciendis
                     tempora animi! Quaerat, saepe?
@@ -212,7 +233,7 @@ export default function Home() {
               </div>
 
               <div className="flex items-start gap-4">
-                <span className="shrink-0 rounded-lg bg-emerald-800 p-4">
+                <span className="shrink-0 rounded-lg bg-emerald-800 text-white p-4">
                   <svg
                     className="size-5"
                     fill="none"
@@ -234,7 +255,7 @@ export default function Home() {
                 <div>
                   <h2 className="text-lg font-bold">Lorem, ipsum dolor.</h2>
 
-                  <p className="mt-1 text-sm text-gray-300">
+                  <p className="mt-1 text-sm text-gray-600 dark:text-gray-300">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Error cumque tempore est ab possimus quisquam reiciendis
                     tempora animi! Quaerat, saepe?
@@ -243,7 +264,7 @@ export default function Home() {
               </div>
 
               <div className="flex items-start gap-4">
-                <span className="shrink-0 rounded-lg bg-emerald-800 p-4">
+                <span className="shrink-0 rounded-lg bg-emerald-800 text-white p-4">
                   <svg
                     className="size-5"
                     fill="none"
@@ -265,7 +286,7 @@ export default function Home() {
                 <div>
                   <h2 className="text-lg font-bold">Lorem, ipsum dolor.</h2>
 
-                  <p className="mt-1 text-sm text-gray-300">
+                  <p className="mt-1 text-sm text-gray-600 dark:text-gray-300">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Error cumque tempore est ab possimus quisquam reiciendis
                     tempora animi! Quaerat, saepe?
@@ -274,7 +295,7 @@ export default function Home() {
               </div>
 
               <div className="flex items-start gap-4">
-                <span className="shrink-0 rounded-lg bg-emerald-800 p-4">
+                <span className="shrink-0 rounded-lg bg-emerald-800 text-white p-4">
                   <svg
                     className="size-5"
                     fill="none"
@@ -296,7 +317,7 @@ export default function Home() {
                 <div>
                   <h2 className="text-lg font-bold">Lorem, ipsum dolor.</h2>
 
-                  <p className="mt-1 text-sm text-gray-300">
+                  <p className="mt-1 text-sm text-gray-600 dark:text-gray-300">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Error cumque tempore est ab possimus quisquam reiciendis
                     tempora animi! Quaerat, saepe?
